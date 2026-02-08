@@ -14,6 +14,10 @@ A **real-time 2D/3D fluid dynamics simulator** solving the incompressible Navier
 
 <br>
 
+![demo](https://github.com/user-attachments/assets/81ce78a9-73d7-4824-b9a2-f6d117cc691b)
+
+
+
 ## 🚀 Key Features
 
 - **2D/3D Navier-Stokes Solver** — Full incompressible fluid simulation: $\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla)\mathbf{u} = -\frac{1}{\rho}\nabla p + \nu \nabla^2 \mathbf{u} + \mathbf{f}$
@@ -157,22 +161,8 @@ make -j$(nproc)
 
 ### Architecture
 
-```
-src/
-├── main.cpp              Entry point, CLI parsing, CUDA init
-├── Simulation.cpp        Main loop, GLFW window, mouse input
-├── FluidSolver.cpp       Navier-Stokes solver (2D + 3D, CPU + GPU paths)
-├── Grid.cpp              Memory management, CPU↔GPU transfers
-├── Renderer.cpp          OpenGL rendering (2D quad + 3D volume raymarcher)
-└── cuda_kernels.cu       16 CUDA kernels (8 × 2D + 8 × 3D)
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/6569e190-58ab-4d78-a4be-70e539cca174" />
 
-include/
-├── FluidSolver.hpp       SimConfig struct, solver class
-├── Grid.hpp              2D/3D grid with GPU mirror pointers
-├── Renderer.hpp          2D texture + 3D volume renderer
-├── Simulation.hpp        Main loop orchestration
-└── cuda_kernels.cuh      CUDA kernel declarations
-```
 
 ### CUDA Kernels
 
