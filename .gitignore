@@ -1,0 +1,27 @@
+# build artifacts
+build/
+cmake-build-*/
+*.exe
+*.o
+*.obj
+*.out
+
+# data output
+output/
+frames/
+*.ppm
+*.bmp
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store
+
+# dependencies (fetched by cmake)
+_deps/
